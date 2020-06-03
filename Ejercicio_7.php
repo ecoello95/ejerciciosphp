@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h1> Ejercicio 7 numeros primos </h1>
+<h1> Ejercicio #7 Programa que evalua si un numero ingresado es un numero primo </h1>
 <?php
 	header ("content-type: text/html;charset=\"utf-8\"");
 
@@ -24,10 +24,10 @@ if(is_numeric($_GET['numero']) && $_GET['numero'] >=1){
 ?>
 
 <form>
-Escribe un numero:
+Digite un numero:
 <input name ="numero" type= "text" placeholder = "Ingrese un cualquier numero">
 
-<input type="submit" value ="Ingresar">
+<input type="submit" value ="Insertar">
 </form>
 
 </body>
