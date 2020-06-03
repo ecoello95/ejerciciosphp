@@ -30,7 +30,7 @@
         }
         if($f==0)
         {
-            echo "$n Es un numero primo";
+            echo "$n Es un primo";
         }
         else
         {
@@ -43,7 +43,7 @@
 
 <form>
 Digite un numero:
-<input name ="numero" type= "text" placeholder = "Ingrese un cualquier numero">
+<input name ="numero" type= "text" placeholder = "Ingrese un numero">
 
 <input type="submit" value ="Insertar">
 </form>
