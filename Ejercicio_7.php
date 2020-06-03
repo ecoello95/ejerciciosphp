@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +8,9 @@
 <body>
     <h2>Ejercicio 7</h2>
     <p>Programa que evalua si un numero ingresado es un numero primo.</p>
-    <form action="Numeros.php" method="post">
-        Ingrese un numero: <input type="text1"><br><br>
+    <form action="ejercicio.php" method="post">
+        Ingrese un numero: <input type="text" type="text1">
+        <br><br>
         <input type="submit" name="primo">
     </form>
 </body>
