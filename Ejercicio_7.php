@@ -1,41 +1,41 @@
-<!DOCTYPE html>
-<html>
-<body>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Ejercicio 7</h2>
+    <p>Programa que evalua si un numero ingresado es un numero primo.</p>
+    <form action="Numeros.php" method="post">
+        Ingrese un numero: <input type="text1"><br><br>
+        <input type="submit" name="primo">
+    </form>
+</body>
+</html>
 
 <?php
-for ($i=1; $i<=100; $i++) {
-    if (primo($i)) {
-        echo "<br>El número ".$i." es primo";
-    } else {
-        echo "<br>El número ".$i." NO es primo";
-    }
-}
- 
-/**
-* Función que determina si un numero es primo
-* Tiene que recibir el numero a determinar si es primo o no
-* Devuelve True o False
-*/
-function primo($num)
-{
-    if ($num == 2 || $num == 3 || $num == 5 || $num == 7) {
-        return True;
-    } else {
-        // comprobamos si es par
-        if ($num % 2 != 0) {
-            // comprobamos solo por los impares
-            for ($i = 3; $i <= sqrt($num); $i += 2) {
-                if ($num % $i == 0) {
-                    return False;
-                }
+    if(isset($_POST["primo"])){
+        $n=$_POST["text1"];
+        for($i=2;$i<=$n/2;$i++){
+            if($n % $i ==0)
+            {
+                $f=1;
+                break;
             }
-            return True;
-        }
-    }
-    return False;
-}
-?>
-</body>
 
-</html>
+        }
+        if($f==0)
+        {
+            echo "$n es primo";
+        }
+        else
+        {
+            echo "$n no es primo";
+        }
+
+
+    }
+?>
