@@ -1,42 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<html>
 <body>
-    <h2>Ejercicio 7</h2>
-    <p>Programa que evalua si un numero ingresado es un numero primo.</p>
-    <form action="ejercicio.php" method="post">
-        Ingrese un numero: <input type="text" type="text1">
-        <br><br>
-        <input type="submit" name="primo">
-    </form>
-</body>
-</html>
 
+<h1> Ejercicio 7 numeros primos </h1>
 <?php
-    if(isset($_POST["primo"])){
-        $n=$_POST["text1"];
-        for($i=2;$i<=$n/2;$i++){
-            if($n % $i ==0)
-            {
-                $f=1;
-                break;
-            }
+	header ("content-type: text/html;charset=\"utf-8\"");
 
-        }
-        if($f==0)
-        {
-            echo "$n es primo";
-        }
-        else
-        {
-            echo "$n no es primo";
-        }
+echo "<h1>".$_GET['numero']."</h1>";
 
-
+if(is_numeric($_GET['numero']) && $_GET['numero'] >=1){
+    if($_GET['numero']%2!=0){
+        echo "<h2>"Es un numero primo".$_GET['numero']."</h2>;
     }
+
+    else{
+        echo "<h2>"No un numero primo".$_GET['numero']."</h2>;
+    }
+
+    else{
+        "<h2>"Ingrese un numero mayor a cero".$_GET['numero']."</h2>";
+    }
+}
+
+
 ?>
 
+<form>
+Escribe un numero:
+<input name ="numero" type= "text" placeholder = "Ingrese un cualquier numero">
+
+<input type="submit" value ="Ingresar">
+</form>
+
+</body>
+</html>
